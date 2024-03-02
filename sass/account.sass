@@ -4,6 +4,8 @@
 $semi-black: transparentize(#000, .5)
 $navy: #22358b
 $dark: #000a38
+$black: #000
+$silver: #d9d9d9
 $orange: #ff471f
 
 $white: #fff
@@ -32,6 +34,43 @@ body
   width: 100%
   margin-left: auto
   margin-right: auto
+
+
+.button
+  padding: 9px 28px
+  border: none
+  outline: none
+  cursor: pointer
+
+  &-orange
+    background: $orange
+    color: $white
+    text-decoration: none
+    line-height: 160%
+    border: 1px solid $orange
+    font-size: 14px
+    font-weight: bold
+    transition: background 300ms ease-in-out, color 300ms ease-in-out, border-color 300ms ease-in-out
+
+    &:hover
+      border: 1px solid $navy
+      background: $navy
+      color: $white
+
+  &-silver
+    background: transparent
+    color: $black
+    line-height: 160%
+    font-size: 14px
+    border: 1px solid rgba(0, 0, 0, 0.13)
+    text-decoration: none
+    font-weight: bold
+    display: grid
+    place-content: center
+    transition: border-color 300ms ease-in-out
+
+    &:hover
+      border-color: $navy
 
 .header
   min-height: 80px
@@ -81,6 +120,9 @@ body
     align-items: center
     gap: 5px
 
+    svg
+      stroke: $black
+
   &-counter
     width: 28px
     height: 28px
@@ -101,7 +143,7 @@ body
   .nav-link
     text-decoration: none
     color: $semi-black
-    transition: color 150ms ease-in-out
+    transition: color 300ms ease-in-out
 
     &:hover
       color: $navy
@@ -143,9 +185,6 @@ body
     &__dream
       font-weight: 600
 
-      svg
-        stroke: $navy
-
     &__dream,
     &__update
       font-size: 14px
@@ -154,6 +193,17 @@ body
       color: $navy
       gap: 10px
       text-decoration: none
+      transition: color 300ms ease-in-out
+
+      &:hover
+        color: $orange
+
+        svg
+          stroke: $orange
+
+      svg
+        stroke: $navy
+        transition: stroke 300ms ease-in-out
 
   &-right
     display: flex
@@ -167,6 +217,7 @@ body
 
     &:after
       content: attr(data-number)
+      transition: transform 300ms ease-in-out
       font-size: 70px
       color: $white
       font-weight: bold
@@ -255,8 +306,7 @@ body
     gap: 5px
     font-size: 14px
     font-weight: bold
-    max-width: 130px
-    width: 100%
+    width: 130px
     height: 40px
     justify-content: center
     transition: background 300ms ease-in-out
@@ -278,6 +328,10 @@ body
   &-link
     color: $navy
     text-decoration: none
+    transition: color 300ms ease-in-out
+
+    &:hover
+      color: $orange
 
   &-title
     font-size: 20px
@@ -292,21 +346,27 @@ body
   z-index: -1
   pointer-events: none
 
-.featured-opportunities
-  margin-top: 60px
-
-  &__filter
-    min-height: 90px
-
 .filter
-  box-shadow: 0 4px 66px rgba(0, 0, 0, 0.06)
   display: flex
+  flex-wrap: wrap
+  gap: 20px
+
+  &-inside
+    flex: 1
+    max-width: 1120px
+    box-shadow: 0 4px 66px rgba(0, 0, 0, 0.06)
+    display: flex
+    min-height: 90px
+    margin-right: auto
 
   &-column
     &__set-job
       max-width: 290px
       width: 100%
       border-right: 1px solid $divider
+
+      & ~ .filter-column
+        flex: 1
 
   &-link
     display: flex
@@ -315,11 +375,23 @@ body
     line-height: 110%
     height: 100%
     justify-content: center
+    color: $black
+    gap: 10px
+    transition: color 300ms ease-in-out
+
+    svg
+      stroke: $black
+      transition: stroke 300ms ease-in-out
+
+    &:hover
+      color: $orange
+
+      svg
+        stroke: $orange
 
     &__set-job
       font-weight: 600
       color: $navy
-      gap: 10px
 
       &:hover
         svg
@@ -328,3 +400,149 @@ body
       svg
         stroke: $navy
         transition: stroke 300ms ease-in-out
+
+
+.opportunities
+  margin-top: 60px
+  padding-bottom: 100px
+
+  &__listing
+    margin-top: 20px
+    display: grid
+    grid-gap: 20px
+    grid-template-columns: repeat(3, 1fr)
+
+  .opportunity
+    background: $white
+    min-height: 300px
+    box-shadow: 0 4px 66px rgba(0, 0, 0, 0.06)
+    padding: 30px
+    transition: box-shadow 300ms ease-in-out
+
+    &:hover
+      box-shadow: 0 4px 11px rgba(0, 0, 0, 0.06)
+
+    &-top
+      display: flex
+      gap: 18px
+
+    &-icf
+      color: $black
+      font-size: 14px
+      line-height: 160%
+
+    &-content
+      display: grid
+      grid-gap: 12px
+
+    &-address
+      font-size: 14px
+      line-height: 140%
+
+    &-vgm
+      font-size: 14px
+      line-height: 140%
+
+    &-date
+      font-size: 14px
+      color: rgba(0, 10, 56, 0.5)
+
+    &-top
+      border-bottom: 1px solid $silver
+      padding-bottom: 20px
+      margin-bottom: 20px
+
+    &-bottom
+      display: flex
+      align-items: center
+      gap: 10px
+      flex-wrap: wrap
+
+      &__buttons
+        display: flex
+        align-items: center
+        gap: 10px
+        margin-right: auto
+
+    &-time
+      color: rgba(0, 10, 56, 0.5)
+      font-size: 14px
+
+    &-lock
+      display: flex
+      gap: 10px
+      font-size: 12px
+      line-height: 140%
+      align-items: center
+      color: rgba(0, 10, 56, 0.5)
+
+    &-title
+      font-size: 18px
+      color: $navy
+      font-weight: bold
+      line-height: 160%
+
+    &-image
+      background: $navy
+      display: grid
+      place-content: center
+      flex-shrink: 0
+      width: 72px
+      height: 72px
+
+.footer
+  background: $navy
+  min-height: 206px
+  color: $white
+  padding: 30px 0 50px 0
+
+  .logo
+    margin-right: 80px
+
+  .nav-link
+    font-size: 14px
+    font-weight: 500
+    padding: 10px
+    color: $white
+    text-decoration: none
+    transition: opacity 300ms ease-in-out
+
+    &:hover
+      opacity: .7
+
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    display: flex
+    gap: 40px
+
+  &-top
+    display: flex
+    align-items: center
+    border-bottom: 1px solid $light-white
+    padding-bottom: 30px
+
+  &-bottom
+    padding-top: 30px
+    display: flex
+    justify-content: space-between
+
+  &-nav
+    display: flex
+    gap: 40px
+
+    &__link
+      opacity: .66
+      color: $white
+      text-decoration: none
+      font-size: 14px
+      line-height: 160%
+      transition: opacity 300ms ease-in-out
+
+      &:hover
+        opacity: 1
+
+  &-copyright
+    font-size: 14px
+    line-height: 160%

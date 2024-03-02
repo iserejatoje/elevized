@@ -8,7 +8,7 @@ export default defineConfig({
         outDir: './docs',
         rollupOptions: {
             input: {
-                index: resolve(__dirname, 'index.html'),
+                homepage: resolve(__dirname, 'homepage.html'),
             },
             output: {
                 entryFileNames: `js/script.js`,

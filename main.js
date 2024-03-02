@@ -23,4 +23,25 @@ $(function () {
     }
     document.querySelectorAll("[data-counter]").forEach(counter)
 
+    const progress = (el) => {
+        const duration = 5000
+        const start = parseInt(el.textContent, 10)
+        const end = parseInt(el.dataset.counter, 10)
+        if (start === end) return
+        const range = end - start
+        let curr = start
+        const timeStart = Date.now()
+        const loop = () => {
+            let elaps = Date.now() - timeStart
+            if (elaps > duration) elaps = duration
+            const frac = elaps / duration
+            const step = frac * range
+            curr = start + step
+            el.style
+            if (elaps < duration) requestAnimationFrame(loop)
+        };
+        requestAnimationFrame(loop)
+    }
+    document.querySelectorAll(".welcome-progress").forEach(progress)
+
 })

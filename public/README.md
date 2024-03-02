@@ -1,5 +1,5 @@
-# Elevized - Account
+# Elevized
 
+- [Welcome page](https://iserejatoje.github.io/elevized/homepage.html)
 
-
-_Made with ❤️_
+Made with ❤️
