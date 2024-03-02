@@ -9,6 +9,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 homepage: resolve(__dirname, 'homepage.html'),
+                community: resolve(__dirname, 'community.html'),
             },
             output: {
                 entryFileNames: `js/script.js`,

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Elevized">
+    <title>Community</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="svg-sprite">
+    <svg id="rate" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.5 0L12.9952 11.25H0.00480938L6.5 0Z" fill="#22358B"/>
+    </svg>
+    <svg id="lock" width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="6.5" width="10" height="7" rx="0.5" stroke="#000A38" stroke-opacity="0.5"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 6V3.5C8 2.11929 6.88071 1 5.5 1C4.11929 1 3 2.11929 3 3.5V6C5.5 6 4.11929 6 5.5 6C6.88071 6 6 6 8 6ZM5.5 0C3.567 0 2 1.567 2 3.5V6C5.5 6 3.567 6 5.5 6C7.433 6 6 6 9 6V3.5C9 1.567 7.433 0 5.5 0Z" fill="#000A38" fill-opacity="0.5"/>
+    </svg>
+    <svg id="dropdown-arrow" width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 0.75L5.5 5.25L10 0.75" stroke-linecap="square"/>
+    </svg>
+    <svg id="dots" width="25" height="5" viewBox="0 0 25 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="2.5" cy="2.5" r="2" />
+        <circle cx="12.5" cy="2.5" r="2" />
+        <circle cx="22.5" cy="2.5" r="2" />
+    </svg>
+    <svg id="fire" width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.10156 20.131C6.10156 23.2109 8.38563 23.9573 11.2032 23.9573C15.997 23.9573 17.5802 20.7687 14.3917 14.3917C9.92778 20.131 9.29007 11.2032 9.92778 8.6524C8.01467 12.4786 6.10156 16.0723 6.10156 20.131Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.2032 23.9573C17.6434 23.9573 21.4065 20.253 21.4065 13.9135C21.4065 7.574 11.2032 1 11.2032 1C11.2032 1 1 7.574 1 13.9135C1 20.253 4.76313 23.9573 11.2032 23.9573Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <svg id="vertical-dots" width="4" height="24" viewBox="0 0 4 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="2" cy="2" r="2" fill="#22358B"/>
+        <circle cx="2" cy="12" r="2" fill="#22358B"/>
+        <circle cx="2" cy="22" r="2" fill="#22358B"/>
+    </svg>
+</div>
+
+<div class="app">
+    <div class="app-inner">
+        <div class="container">
+            <header class="header">
+                <div class="column">
+                    <a href="#" aria-label="Homepage" class="logo">
+                        <img src="svg/logo.svg" alt="Account" width="157" height="26" decoding="auto">
+                    </a>
+                </div>
+                <div class="column">
+                    <nav>
+                        <ul>
+                            <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Explore Opportunities</a></li>
+                            <li class="nav-item"><a class="nav-link nav-link__active" href="#">Community</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="column">
+                    <div class="header-info">
+                        <a href="#" class="header-notify" data-notify="2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="23" fill="none"><path stroke="#000A38" stroke-linecap="round" stroke-linejoin="round" d="m7.74 6.2 6.5 3.9 6.49-3.9m3.87 15.58H3.85a2.6 2.6 0 0 1-2.6-2.6V3.6A2.6 2.6 0 0 1 3.85 1h20.78a2.6 2.6 0 0 1 2.6 2.6v15.55a2.62 2.62 0 0 1-2.63 2.63Z"/></svg>
+                        </a>
+                        <button class="header-dropdown">
+                            <svg width="11" height="6"><use xlink:href="#dropdown-arrow"></use></svg>
+                            Evgeny Raguzin
+                        </button>
+                        <div class="header-counter">3</div>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+
+        <div class="page-content">
+            <div class="container">
+                <h1>Community</h1>
+                <div class="page-excerpt">16 threads  available</div>
+
+                <div class="community">
+                    <div class="community-listing">
+                        <div class="community-post">
+                            <div class="community-rating">
+                                <div class="rating-inside">
+                                    <button><svg width="13" height="12"><use xlink:href="#rate"></use></svg></button>
+                                    <div class="community-rating__number">8</div>
+                                </div>
+                            </div>
+                            <div class="community-post__inside">
+                                <div class="community-post__title">The Community feature is available on the storefront for our Pro and Uscreen Plus plans. Community feature is also available for native mobile apps on iOS and Android.</div>
+                                <div class="community-post__content">
+                                    Users can engage with the admin content as well as with each other in the Community. Uscreen customers with an active community see 2x more retention than Uscreen customers without an active community.
+                                </div>
+                                <div class="community-post__comments">
+                                    <div class="community-post__comments-number">2</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="community-post">
+                            <div class="community-rating">
+                                <div class="rating-inside">
+                                    <button><svg width="13" height="12"><use xlink:href="#rate"></use></svg></button>
+                                    <div class="community-rating__number">8</div>
+                                </div>
+                            </div>
+                            <div class="community-post__inside">
+                                <div class="community-post__title">The Community feature is available on the storefront for our Pro and Uscreen Plus plans. Community feature is also available for native mobile apps on iOS and Android.</div>
+                                <div class="community-post__content">
+                                    Users can engage with the admin content as well as with each other in the Community. Uscreen customers with an active community see 2x more retention than Uscreen customers without an active community.
+                                </div>
+                                <div class="community-post__comments">
+                                    <div class="community-post__comments-number">2</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="community-post">
+                            <div class="community-rating">
+                                <div class="rating-inside">
+                                    <button><svg width="13" height="12"><use xlink:href="#rate"></use></svg></button>
+                                    <div class="community-rating__number">8</div>
+                                </div>
+                            </div>
+                            <div class="community-post__inside">
+                                <div class="community-post__title">The Community feature is available on the storefront for our Pro and Uscreen Plus plans. Community feature is also available for native mobile apps on iOS and Android.</div>
+                                <div class="community-post__content">
+                                    Users can engage with the admin content as well as with each other in the Community. Uscreen customers with an active community see 2x more retention than Uscreen customers without an active community.
+                                </div>
+                                <div class="community-post__comments">
+                                    <div class="community-post__comments-number">2</div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <div class="community-all">
+                            <a href="#" class="button button-see__all button-orange">See all</a>
+                        </div>
+
+                    </div>
+                    <div class="community-aside">
+                        <div class="community-sticky">
+
+                            <div class="community-aside__top">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="none"><circle cx="18.5" cy="18.5" r="18.5" fill="#fff"/><path fill="#22358B" d="M28 19.27h-8.12V27h-2.76v-7.73H9v-2.5h8.12V9h2.76v7.77H28v2.5Z"/></svg>
+                                <div class="community-aside__title">Add discussion</div>
+                            </div>
+                            <div class="community-aside__content">
+                                Do you have something to share with fellow learners ?
+                            </div>
+                            <button type="button" class="button button-orange__white">Create Thread</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="column">
+                    <a href="#" aria-label="Homepage" class="logo">
+                        <img src="svg/logo-footer.svg" alt="Go to homepage" width="157" height="26" decoding="auto">
+                    </a>
+                </div>
+                <div class="column">
+                    <nav>
+                        <ul>
+                            <li class="nav-item"><a class="nav-link nav-link__active" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Newsroom</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">FAQs</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">© Copyright 2022 AboveBoard Solutions, Inc</div>
+                <div class="footer-nav">
+                    <a href="#" class="footer-nav__link">Terms & Conditions</a>
+                    <a href="#" class="footer-nav__link">Privacy Policy</a>
+                    <a href="#" class="footer-nav__link">Your CA Privacy Rights</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script type="module" src="/main.js"></script>
+</body>
+</html>

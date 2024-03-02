@@ -23,6 +23,14 @@ body,
 html
   height: 100%
 
+.app
+  display: flex
+  flex-direction: column
+  min-height: 100%
+
+  &-inner
+    flex: 1 0 auto
+
 body
   font-family: 'Montserrat', sans-serif
   color: $dark
@@ -37,7 +45,7 @@ body
 
 
 .button
-  padding: 9px 28px
+  padding: 9px 30px
   border: none
   outline: none
   cursor: pointer
@@ -56,6 +64,21 @@ body
       border: 1px solid $navy
       background: $navy
       color: $white
+
+  &-orange__white
+    background: $orange
+    color: $white
+    text-decoration: none
+    line-height: 160%
+    border: 1px solid $orange
+    font-size: 14px
+    font-weight: bold
+    transition: background 300ms ease-in-out, color 300ms ease-in-out, border-color 300ms ease-in-out
+
+    &:hover
+      border: 1px solid $white
+      background: $white
+      color: $navy
 
   &-silver
     background: transparent
@@ -494,6 +517,7 @@ body
   background: $navy
   min-height: 206px
   color: $white
+  flex: 0 0 auto
   padding: 30px 0 50px 0
 
   .logo
@@ -546,3 +570,106 @@ body
   &-copyright
     font-size: 14px
     line-height: 160%
+
+.page-content
+  padding-top: 55px
+
+  .page-excerpt
+    font-size: 14px
+    line-height: 110%
+    margin-top: 20px
+    opacity: .66
+
+  h1
+    font-size: 20px
+    font-weight: bold
+    line-height: 120%
+    margin-top: 0
+
+.community
+  margin-top: 60px
+  display: flex
+  gap: 35px
+  margin-bottom: 100px
+
+  .button-see__all
+    display: inline-flex
+
+  &-all
+    margin-left: 50px
+
+  .rating-inside
+    position: sticky
+    top: 20px
+    padding-bottom: 20px
+
+  &-rating
+    max-width: 50px
+    width: 100%
+
+    &__number
+      font-size: 20px
+      font-weight: bold
+      color: $navy
+
+    button
+      background: transparent
+      border: none
+      outline: none
+      padding: 0
+
+  &-post
+    display: flex
+
+    &__inside
+      background: $white
+      padding: 30px 40px
+      box-shadow: 0 4px 66px rgba(0, 0, 0, 0.06)
+
+    &__title
+      font-size: 20px
+      font-weight: bold
+      line-height: 140%
+
+    &__comments
+      margin-top: 20px
+
+      &-number
+        border: 1px solid rgba(34, 53, 139, 0.25)
+        max-width: 32px
+        height: 32px
+        border-radius: 4px
+        display: grid
+        place-content: center
+
+    &__content
+      margin-top: 10px
+      font-size: 16px
+      opacity: .66
+      line-height: 160%
+
+  &-listing
+    display: flex
+    flex-direction: column
+    gap: 20px
+
+  &-aside
+    max-width: 320px
+    width: 100%
+
+    &__top
+      display: flex
+      align-items: center
+      gap: 15px
+
+    &__content
+      line-height: 160%
+
+  &-sticky
+    position: sticky
+    top: 30px
+    padding: 35px 30px
+    background: $navy
+    color: $white
+    display: grid
+    grid-gap: 20px
