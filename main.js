@@ -1,3 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+import './sass/account.sass'
+$(function () {
 
 })
