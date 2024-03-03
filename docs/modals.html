@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./vite.svg"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Elevized">
+    <title>Modals</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="jquery.nice-select.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+  <script type="module" crossorigin src="./js/script6.js"></script>
+  <link rel="stylesheet" crossorigin href="./css/style.css">
+</head>
+<body>
+
+<div class="svg-sprite">
+    <svg id="close" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 26.9027L13.9514 13.9514L1 26.9027ZM26.9027 1L13.9514 13.9514L26.9027 1ZM13.9514 13.9514L1 1L13.9514 13.9514ZM13.9514 13.9514L26.9027 26.9027L13.9514 13.9514Z" fill="white"/>
+        <path d="M1 26.9027L13.9514 13.9514M13.9514 13.9514L26.9027 1M13.9514 13.9514L1 1M13.9514 13.9514L26.9027 26.9027" stroke="black" stroke-opacity="0.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <svg id="person" width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 21V19.75C1 14.9175 4.91751 11 9.75 11C14.5825 11 18.5 14.9175 18.5 19.75V21" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.75 11C12.5114 11 14.75 8.76138 14.75 6C14.75 3.23858 12.5114 1 9.75 1C6.98858 1 4.75 3.23858 4.75 6C4.75 8.76138 6.98858 11 9.75 11Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <svg id="rate" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.5 0L12.9952 11.25H0.00480938L6.5 0Z" fill="#22358B"/>
+    </svg>
+    <svg id="lock" width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="6.5" width="10" height="7" rx="0.5" stroke="#000A38" stroke-opacity="0.5"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 6V3.5C8 2.11929 6.88071 1 5.5 1C4.11929 1 3 2.11929 3 3.5V6C5.5 6 4.11929 6 5.5 6C6.88071 6 6 6 8 6ZM5.5 0C3.567 0 2 1.567 2 3.5V6C5.5 6 3.567 6 5.5 6C7.433 6 6 6 9 6V3.5C9 1.567 7.433 0 5.5 0Z" fill="#000A38" fill-opacity="0.5"/>
+    </svg>
+    <svg id="dropdown-arrow" width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 0.75L5.5 5.25L10 0.75" stroke-linecap="square"/>
+    </svg>
+    <svg id="dots" width="25" height="5" viewBox="0 0 25 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="2.5" cy="2.5" r="2" />
+        <circle cx="12.5" cy="2.5" r="2" />
+        <circle cx="22.5" cy="2.5" r="2" />
+    </svg>
+    <svg id="fire" width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.10156 20.131C6.10156 23.2109 8.38563 23.9573 11.2032 23.9573C15.997 23.9573 17.5802 20.7687 14.3917 14.3917C9.92778 20.131 9.29007 11.2032 9.92778 8.6524C8.01467 12.4786 6.10156 16.0723 6.10156 20.131Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.2032 23.9573C17.6434 23.9573 21.4065 20.253 21.4065 13.9135C21.4065 7.574 11.2032 1 11.2032 1C11.2032 1 1 7.574 1 13.9135C1 20.253 4.76313 23.9573 11.2032 23.9573Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <svg id="vertical-dots" width="4" height="24" viewBox="0 0 4 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="2" cy="2" r="2" fill="#22358B"/>
+        <circle cx="2" cy="12" r="2" fill="#22358B"/>
+        <circle cx="2" cy="22" r="2" fill="#22358B"/>
+    </svg>
+</div>
+
+<div class="modals">
+
+    <form method="post" enctype="application/x-www-form-urlencoded" action="" class="modal modal-with__title">
+        <button class="modal-close"><svg width="28" height="28"><use xlink:href="#close"></use></svg></button>
+
+        <div class="modal-title">My Dream Job</div>
+        <div class="modal-inside">
+            <div class="modal-step">
+                <div class="step-row">
+                    <div class="font-weight--bold">What kinds of opportunities are you looking for? *</div>
+                    <div class="font-size--14">Select one or more options</div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <form action="" enctype="application/x-www-form-urlencoded" method="post" class="modal">
+        <button class="modal-close"><svg width="28" height="28"><use xlink:href="#close"></use></svg></button>
+
+        <div class="modal-columns">
+            <div class="column">
+                <div class="modal-house">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJSSURBVHgBtZU9aFRBEMfnQkBB0BMkhQq+2ChI5JlGtDFKOhuxEKwSS620tDKKhdj4UdgImkILQfyIICLiRe0sTEDQIoUvWAiCeoKQwsD5m3v/RzYv+8xdNAM/Zt/s7szs7OydWRfSarWGILHVFAJ8EhNwzFZDPID0IRhXwNuw3/6XFEGC7z4YhQbMwKl/LmdwknWRuQQu6nRPYMRWIkGQlpxdjmWO7QD8KL57rENhUx1V12cGB2EzjOgUrvt8slarvUI1Ow7CxhSuMHwf2nGUoWb0uR2uwlvW3lFCtmwQvYkGw5vKfEeYXUQeEThB74IN4URvybFncBhOwm8Y09GL+WJY965CpzAtWyLbEukJHIyhpmAYzuLcaz6LfSdsKu27DrvBG+GB9k3J9hK+LjmJOuQo7MF5MyiV1/q7lwLOB/se2kITeAnnYaKYxMdccOpF5WoqgF/ggKlUKsE2rbkk3VDgVPo13IJJOOLNYrFyBeKXdiG8i0A+BAmdUIB28h5Atunypl6Ly3GyGdR4L3zUeB+8sS4ldpLH8AXWCw/wVHPPpb27zqGHgn2pbEnZYewkk/CtZCu6xS+8H87AFngBdy2//Ptac4OyzVZdfCH+ulNbeHjeRYu6CyfjrnG0FrVG5mvYf0X8Vd7J6eLiS91VljnLfw1c/DEmfopOg3QqGU77lUyjalEYZMD/5Sy/TM8qKzK0/KLbWg7f4Xww5lDBRquCfIZ7okqGpTdaF1J+8c/+tpgs520FUtPmxPIfu2yZ9YnWlLWLl7Ip/RO2knT7EH8AmoJL/yudys0AAAAASUVORK5CYII=" alt="" width="25" height="24">
+                </div>
+            </div>
+            <div class="column">
+                <div class="row row-role">
+                    <div class="font-weight--bold">SaaS</div>
+                    <div class="row-role__text">Interim Chief Financial Officer</div>
+                    <div class="row-role__excerpt font-opacity">Confidential - Saas Company</div>
+                </div>
+                <div class="row row-params font-size--14">
+                    <div class="row-role__param">Finance | C-suite | Interim/Fractional</div>
+                    <div class="row-role__param-grid font-opacity">
+                        <span class="grid-block__item">Remote</span>
+                        <span class="grid-block__item">Interim/Fractional</span>
+                        <span class="grid-block__item">C-suite · Finance</span>
+                    </div>
+                </div>
+                <div class="row  font-size--14">
+                    <div class="font-weight--bold">About this role</div>
+                    <div class="about-role">
+                        <p><span>Company</span>: Our client is a PE backed SaaS company in need of an interim CFO.</p>
+                        <p><span>Location</span>: Remote, Dallas Preferred</p>
+
+                       <p> <span>Duration</span>: 5 days/week, 3-4+ months</p>
+                    </div>
+                </div>
+                <div class="row row-qualifications font-size--14">
+                    <div class="font-weight--bold">Qualifications</div>
+                    <div class="font-opacity">Our ideal interim CFO candidate has</div>
+                    <ul>
+                        <li>Proven success as CFO of a similarly sized private equity backed company</li>
+                        <li>Prior experience leading finance within an enterprise SaaS business model</li>
+                        <li>Previous experience managing a data intensive asset</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-buttons">
+            <button class="button button-orange">I’m Interested</button>
+            <button class="button button-empty">Close</button>
+
+            <button class="bookmark">
+                <svg width="21" height="27" viewBox="0 0 21 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 26V3.77778C1 2.24365 2.24365 1 3.77778 1H17.6667C19.2008 1 20.4444 2.24365 20.4444 3.77778V26L12.2243 20.7157C11.3093 20.1274 10.1351 20.1274 9.22014 20.7157L1 26Z" stroke="black" stroke-opacity="0.3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </form>
+    <div class="modal">
+        <div class="modal-text">
+            Some of your experience and/or the settings for your Dream Job indicate you may not fulfill the necessary requirements for this role. This decreases your chances of being Matched or contacted by a Recruiter if you choose to express interest. Would you still like to continue?
+        </div>
+        <div class="modal-center__text">
+            Visit our <a href="#">Resource Center</a> for tips on optimizing your competitiveness as a candidate.
+        </div>
+        <div class="modal-line"></div>
+
+        <div class="modal-buttons">
+            <button class="button button-orange">Continue</button>
+            <button class="button button-empty">Cancel</button>
+        </div>
+    </div>
+
+    <form action="" method="post" enctype="application/x-www-form-urlencoded" class="modal modal-classic">
+        <button class="modal-close"><svg width="28" height="28"><use xlink:href="#close"></use></svg></button>
+
+        <div class="modal-heading">Invite</div>
+
+        <div class="modal-elements">
+            <input type="email" name="email" placeholder="E-mail *">
+        </div>
+
+        <div class="heading-small">Write a message</div>
+        <div class="modal-text__small">
+            I just joined and I think you should too! They have hundreds of intern job opportunities on their platform. It's a valuable membership even if you aren't actively looking for a new role! Members get access to resources and events created for interns looking to take their career to the next level.
+        </div>
+        <div class="modal-text__little">You can customize this message with your own. We include basic information about Elevized too.</div>
+
+        <div class="center modal-bottom">
+            <button class="button button-orange">Send</button>
+        </div>
+    </form>
+
+    <form method="post" enctype="application/x-www-form-urlencoded" action="" class="modal modal-with__title">
+        <button class="modal-close"><svg width="28" height="28"><use xlink:href="#close"></use></svg></button>
+
+        <div class="modal-title">Messages</div>
+        <div class="modal-inside">
+            <div class="modal-shadow">
+                <div class="input">
+                    <input type="text" placeholder="Opportunity">
+                </div>
+
+                <div class="modal-notify">
+                    You can attach any message along with your submission to the recruitment team. Please note that you will only be able to send one message. You will receive a response once matched.
+                </div>
+
+                <div class="input select-input">
+                    <select name="team">
+                        <option value="Recruitment Team">Recruitment Team</option>
+                        <option value="Recruitment Team 2">Recruitment Team 2</option>
+                    </select>
+                </div>
+
+                <div class="input">
+                    <input type="text" placeholder="Write a message">
+                    <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" fill="none"><mask id="a" width="26" height="27" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:luminance"><path fill="#fff" d="M25.5.91H0v25.5h25.5V.9Z"/></mask><g stroke="#22358B" stroke-linecap="round" stroke-linejoin="round" mask="url(#a)"><path d="M23.53 4.69 11.87 23.22 10.1 14.1 2.13 9.3l21.4-4.61ZM10.04 14.13l13.5-9.44"/></g></svg></button>
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+
+</div>
+
+</body>
+</html>

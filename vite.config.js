@@ -12,6 +12,7 @@ export default defineConfig({
                 community: resolve(__dirname, 'community.html'),
                 explore: resolve(__dirname, 'explore.html'),
                 post: resolve(__dirname, 'post.html'),
+                modals: resolve(__dirname, 'modals.html'),
             },
             output: {
                 entryFileNames: `js/script.js`,
