@@ -65,6 +65,21 @@ body
       background: $navy
       color: $white
 
+  &-navy
+    background: $navy
+    color: $white
+    text-decoration: none
+    line-height: 160%
+    border: 1px solid $navy
+    font-size: 14px
+    font-weight: bold
+    transition: background 300ms ease-in-out, color 300ms ease-in-out, border-color 300ms ease-in-out
+
+    &:hover
+      border: 1px solid $orange
+      background: $orange
+      color: $white
+
   &-orange__white
     background: $orange
     color: $white
@@ -451,7 +466,7 @@ body
     transition: box-shadow 300ms ease-in-out
 
     &:hover
-      box-shadow: 0 4px 11px rgba(0, 0, 0, 0.06)
+      box-shadow: 0 4px 11px rgba(0, 0, 0, 0.09)
 
     &-top
       display: flex
@@ -685,8 +700,56 @@ body
 .explore-filter
   display: flex
   gap: 30px
+  margin-bottom: 35px
+
+  .input
+    min-height: 58px
+    display: flex
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+
+  [type="reset"]
+    background: transparent
+    border: none
+    padding: 0
+    outline: none
+    cursor: pointer
+
+    path
+      transition: stroke-opacity 300ms ease-in-out
+
+    &:hover
+      path
+        stroke-opacity: .5
+
+  .column
+
+    &:last-child
+      display: flex
+
+      button
+        display: flex
+        align-items: center
+        gap: 10px
+
+        svg
+          width: 22px
+
+    &:not(:last-child)
+      flex: 1
+
+    input
+      border: none
+      outline: none
+      width: 100%
+
+      &::placeholder
+        color: transparentize($black, .44)
 
 .search-button
   background: transparent
   display: grid
   place-content: center
+  border: none
+  outline: none
+  height: 100%
+  cursor: pointer
