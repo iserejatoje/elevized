@@ -22,6 +22,12 @@ export default defineConfig({
                     if (/css/i.test(extType)) {
                         fileName = 'style';
                         return `${extType}/${fileName}[extname]`;
+                    }
+                    if (/jpg/i.test(extType)) {
+                        return `img/[name][extname]`;
+                    }
+                    if (/png/i.test(extType)) {
+                        return `img/[name][extname]`;
                     } else {
                         return `${extType}/[name][extname]`;
                     }
