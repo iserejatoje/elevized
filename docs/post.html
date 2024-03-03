@@ -16,6 +16,10 @@
 <body>
 
 <div class="svg-sprite">
+    <svg id="person" width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 21V19.75C1 14.9175 4.91751 11 9.75 11C14.5825 11 18.5 14.9175 18.5 19.75V21" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.75 11C12.5114 11 14.75 8.76138 14.75 6C14.75 3.23858 12.5114 1 9.75 1C6.98858 1 4.75 3.23858 4.75 6C4.75 8.76138 6.98858 11 9.75 11Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
     <svg id="rate" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M6.5 0L12.9952 11.25H0.00480938L6.5 0Z" fill="#22358B"/>
     </svg>
@@ -201,6 +205,37 @@
                                 <textarea name="comment" placeholder="What’s on your mind ?"></textarea>
                                 <button type="submit" class="button button-orange">Send</button>
                             </form>
+
+                            <div class="comments-listing">
+                                <div class="comment">
+                                    <div class="comment-top">
+                                        <div class="comment-avatar">
+                                            <svg width="19" height="22"><use xlink:href="#person"></use></svg>
+                                        </div>
+                                        <div class="comment-author">
+                                            <div class="comment-author__name">Sergey</div>
+                                            <div class="comment-author__role">User</div>
+                                        </div>
+                                    </div>
+                                    <div class="comment-bottom">
+                                        Besides controlling who can see community features, you can also control who can interact with your community between all registered users and active subscribers. You can also gate community engagement to active subscribers on select price plans.
+                                    </div>
+                                </div>
+                                <div class="comment">
+                                    <div class="comment-top">
+                                        <div class="comment-avatar">
+                                            <svg width="19" height="22"><use xlink:href="#person"></use></svg>
+                                        </div>
+                                        <div class="comment-author">
+                                            <div class="comment-author__name">Kirill</div>
+                                            <div class="comment-author__role">User</div>
+                                        </div>
+                                    </div>
+                                    <div class="comment-bottom">
+                                        Besides controlling who can see community features, you can also control who can interact with your community between all registered users and active subscribers. You can also gate community engagement to active subscribers on select price plans.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

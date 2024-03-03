@@ -772,7 +772,6 @@ body
 .post
   display: flex
   align-items: flex-start
-  margin-bottom: 60px
   margin-bottom: 100px
   gap: 40px
 
@@ -849,6 +848,8 @@ body
 
 .comments
   margin-top: 60px
+  display: grid
+  grid-gap: 20px
 
   &-title
     font-size: 20px
@@ -866,6 +867,8 @@ body
     height: 32px
     width: 100%
     border-radius: 4px
+    font-size: 12px
+    color: $navy
     display: grid
     place-content: center
 
@@ -878,10 +881,46 @@ body
 
     textarea
       border: 1px solid rgba(0, 0, 0, 0.1)
-      padding: 20px 30px
+      padding: 25px 30px
       resize: none
       width: 100%
+      max-height: 120px
 
     .button
       max-width: 80px
       font-size: 12px
+
+.comments-listing
+  display: grid
+  grid-gap: 15px
+
+  .comment
+    box-shadow: 0 4px 66px rgba(0, 0, 0, 0.06)
+    background: $white
+    padding: 30px 45px
+    display: grid
+    grid-gap: 20px
+
+    &-author
+      line-height: 140%
+
+    &-author__name
+      font-size: 14px
+      font-weight: bold
+
+    &-author__role
+      font-size: 14px
+      color: transparentize($black, .44)
+
+    &-top
+      display: flex
+      gap: 20px
+      align-items: center
+
+    &-avatar
+      background: $navy
+      width: 53px
+      height: 53px
+      display: grid
+      place-content: center
+      border-radius: 50%
