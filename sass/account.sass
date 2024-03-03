@@ -1,4 +1,5 @@
 @import "normalize.css"
+@import "nice-select.css"
 @import "fonts"
 
 $semi-black: transparentize(#000, .5)
@@ -958,11 +959,162 @@ body
     background: $white
     max-width: 670px
     width: 100%
-    padding: 45px 40px
     margin-left: auto
     margin-right: auto
     line-height: 160%
     position: relative
+
+    .step-row
+      display: grid
+      grid-gap: 10px
+
+    .bookmark
+      background: transparent
+      border: none
+      outline: none
+      padding: 0
+      cursor: pointer
+      position: absolute
+      right: 0
+      bottom: 0
+
+      path
+        transition: stroke-opacity 300ms ease-in-out
+
+      &:hover
+        path
+          stroke-opacity: .6
+
+    .about-role
+      margin-top: 10px
+
+      span
+        opacity: .66
+
+      p:last-child
+        margin-bottom: 0
+
+      p:first-child
+        margin-top: 0
+
+    .font-size--14
+      font-size: 14px
+
+    .font-weight--bold
+      font-weight: bold
+
+    .font-opacity
+      opacity: .66
+
+    .row
+      &-qualifications
+        display: grid
+        grid-gap: 15px
+
+        ul
+          padding-top: 0
+          padding-bottom: 0
+          margin: 0
+          padding-left: 18px
+
+          li
+            margin-bottom: 1em
+
+      &-role__param-grid
+        opacity: .66
+        display: flex
+        gap: 30px
+
+      &-params
+        display: grid
+        grid-gap: 10px
+
+      &-role__title
+        font-weight: bold
+        line-height: 130%
+
+      &-role__text
+        font-size: 14px
+        font-weight: 500
+
+      &-role__excerpt
+        font-size: 14px
+        margin-top: 2px
+
+      &-role__param
+        font-weight: 500
+
+    &-columns
+      display: flex
+      gap: 20px
+      margin-bottom: 50px
+
+      .column
+        &:last-child
+          display: grid
+          grid-gap: 25px
+
+    &-house
+      width: 42px
+      height: 42px
+      background: $navy
+      display: grid
+      place-content: center
+
+    .select-input
+      margin-bottom: 40px
+
+    .input
+      border-bottom: 1px solid $silver
+      position: relative
+
+      button
+        background: transparent
+        padding: 0
+        position: absolute
+        right: 0
+        outline: none
+        border: none
+        height: 27px
+        cursor: pointer
+        bottom: 6px
+
+      input
+        font-size: 14px
+        line-height: 250%
+        border: none
+        width: 100%
+        outline: none
+
+    &-notify
+      padding: 25px 30px
+      background: $navy
+      color: $white
+      line-height: 140%
+      margin: 40px 0 30px 0
+      font-size: 14px
+
+    &-shadow
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.07)
+      padding: 55px 30px
+
+    &-step
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.07)
+      padding: 30px
+
+    &-inside
+      padding: 30px 45px 60px 45px
+
+    &-title
+      padding: 26px 45px
+      font-weight: bold
+      font-size: 20px
+      color: $dark
+      min-height: 78px
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.07)
+
+    &:not(.modal-with__title)
+      padding: 45px 40px
 
     &-text__small
       border-bottom: 1px solid $light-blue
@@ -1002,7 +1154,7 @@ body
       cursor: pointer
       position: absolute
       right: 20px
-      top: 20px
+      top: 25px
 
       path
         transition: stroke-opacity 300ms ease-in-out
@@ -1014,6 +1166,7 @@ body
     &-buttons
       display: flex
       gap: 10px
+      position: relative
 
     &-line
       background: rgba(34, 53, 138, 0.2)

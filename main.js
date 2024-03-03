@@ -1,6 +1,7 @@
 import './sass/account.sass'
 
 $(function () {
+    $('select').niceSelect();
 
     const counter = (el) => {
         const duration = document.querySelector('[data-duration]').getAttribute('data-duration')
