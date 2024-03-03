@@ -21,7 +21,12 @@ $(function () {
         };
         requestAnimationFrame(loop)
     }
+
     document.querySelectorAll("[data-counter]").forEach(counter)
+
+    Fancybox.bind(document.querySelector("[data-fancybox]"), {
+
+    });
 
     // const progress = (el) => {
     //     const duration = 500

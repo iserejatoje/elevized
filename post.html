@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Elevized">
+    <title>Post</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+</head>
+<body>
+
+<div class="svg-sprite">
+    <svg id="rate" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.5 0L12.9952 11.25H0.00480938L6.5 0Z" fill="#22358B"/>
+    </svg>
+    <svg id="lock" width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="6.5" width="10" height="7" rx="0.5" stroke="#000A38" stroke-opacity="0.5"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 6V3.5C8 2.11929 6.88071 1 5.5 1C4.11929 1 3 2.11929 3 3.5V6C5.5 6 4.11929 6 5.5 6C6.88071 6 6 6 8 6ZM5.5 0C3.567 0 2 1.567 2 3.5V6C5.5 6 3.567 6 5.5 6C7.433 6 6 6 9 6V3.5C9 1.567 7.433 0 5.5 0Z" fill="#000A38" fill-opacity="0.5"/>
+    </svg>
+    <svg id="dropdown-arrow" width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 0.75L5.5 5.25L10 0.75" stroke-linecap="square"/>
+    </svg>
+    <svg id="dots" width="25" height="5" viewBox="0 0 25 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="2.5" cy="2.5" r="2" />
+        <circle cx="12.5" cy="2.5" r="2" />
+        <circle cx="22.5" cy="2.5" r="2" />
+    </svg>
+    <svg id="fire" width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.10156 20.131C6.10156 23.2109 8.38563 23.9573 11.2032 23.9573C15.997 23.9573 17.5802 20.7687 14.3917 14.3917C9.92778 20.131 9.29007 11.2032 9.92778 8.6524C8.01467 12.4786 6.10156 16.0723 6.10156 20.131Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.2032 23.9573C17.6434 23.9573 21.4065 20.253 21.4065 13.9135C21.4065 7.574 11.2032 1 11.2032 1C11.2032 1 1 7.574 1 13.9135C1 20.253 4.76313 23.9573 11.2032 23.9573Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <svg id="vertical-dots" width="4" height="24" viewBox="0 0 4 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="2" cy="2" r="2" fill="#22358B"/>
+        <circle cx="2" cy="12" r="2" fill="#22358B"/>
+        <circle cx="2" cy="22" r="2" fill="#22358B"/>
+    </svg>
+</div>
+
+<div class="app">
+    <div class="app-inner">
+        <div class="container">
+            <header class="header">
+                <div class="column">
+                    <a href="#" aria-label="Homepage" class="logo">
+                        <img src="svg/logo.svg" alt="Account" width="157" height="26" decoding="auto">
+                    </a>
+                </div>
+                <div class="column">
+                    <nav>
+                        <ul>
+                            <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Explore Opportunities</a></li>
+                            <li class="nav-item"><a class="nav-link nav-link__active" href="#">Community</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="column">
+                    <div class="header-info">
+                        <a href="#" class="header-notify" data-notify="2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="23" fill="none"><path stroke="#000A38" stroke-linecap="round" stroke-linejoin="round" d="m7.74 6.2 6.5 3.9 6.49-3.9m3.87 15.58H3.85a2.6 2.6 0 0 1-2.6-2.6V3.6A2.6 2.6 0 0 1 3.85 1h20.78a2.6 2.6 0 0 1 2.6 2.6v15.55a2.62 2.62 0 0 1-2.63 2.63Z"/></svg>
+                        </a>
+                        <button class="header-dropdown">
+                            <svg width="11" height="6"><use xlink:href="#dropdown-arrow"></use></svg>
+                            Evgeny Raguzin
+                        </button>
+                        <div class="header-counter">3</div>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <div class="page-content">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a href="#">Community</a>
+                    <span class="divider">-</span>
+                    <span>Community - The Community feature is available on the storefront for ...</span>
+                </div>
+
+                <div class="post">
+
+                    <div class="post-content">
+                        <h1>The Community feature is available on the storefront for our Pro and Uscreen Plus plans. Community feature is also available for native mobile apps on iOS and Android.</h1>
+
+                        <p>Users can engage with the admin content as well as with each other in the Community. Uscreen customers with an active community see 2x more retention than Uscreen customers without an active community.</p>
+
+                        <p><b>Admin Area</b></p>
+                        <p>The admin area is the control room for your Community.</p>
+
+                        <blockquote>Your Uscreen community has 2 levels of access to manage:</blockquote>
+
+                        <ol>
+                            <li><b>Visibility</b>: where you control who gets to see and browse your community.</li>
+                            <li><b>Engagement</b>: where you control who gets to interact in your community. There are 3 groups of people to manage for your community:</li>
+                            <li><b>Public</b>: any internet users</li>
+                            <li><b>Registered</b> users: people with accounts to your platform (may or may not be paying).</li>
+                            <li><b>Subscribers</b>: active, paying members to your platform.</li>
+                        </ol>
+
+                        <a data-fancybox href="images/post-image.jpg" class="zoom post-image">
+                            <img src="images/post-image.jpg" alt="" width="562" height="433" decoding="async" loading="lazy">
+
+                            <span class="zoom-icon"><svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.75 12.75L18 17" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 8L11 8" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8 5L8 11" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1 8C1 11.866 4.134 15 8 15C9.93632 15 11.6891 14.2138 12.9563 12.9432C14.2193 11.677 15 9.92967 15 8C15 4.134 11.866 1 8 1C4.134 1 1 4.134 1 8Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+                        </a>
+
+                        <p><b>Admin Area</b></p>
+                        <p>The admin area is the control room for your Community.</p>
+
+                        <blockquote>Your Uscreen community has 2 levels of access to manage:</blockquote>
+
+                        <ol>
+                            <li><b>Visibility</b>: where you control who gets to see and browse your community.</li>
+                            <li><b>Engagement</b>: where you control who gets to interact in your community. There are 3 groups of people to manage for your community:</li>
+                            <li><b>Public</b>: any internet users</li>
+                            <li><b>Registered</b> users: people with accounts to your platform (may or may not be paying).</li>
+                            <li><b>Subscribers</b>: active, paying members to your platform.</li>
+                        </ol>
+
+
+                        <p><b>Admin Area</b></p>
+                        <p>The admin area is the control room for your Community.</p>
+
+                        <blockquote>Your Uscreen community has 2 levels of access to manage:</blockquote>
+
+                        <ol>
+                            <li><b>Visibility</b>: where you control who gets to see and browse your community.</li>
+                            <li><b>Engagement</b>: where you control who gets to interact in your community. There are 3 groups of people to manage for your community:</li>
+                            <li><b>Public</b>: any internet users</li>
+                            <li><b>Registered</b> users: people with accounts to your platform (may or may not be paying).</li>
+                            <li><b>Subscribers</b>: active, paying members to your platform.</li>
+                        </ol>
+
+                        <p><b>Admin Area</b></p>
+                        <p>The admin area is the control room for your Community.</p>
+
+                        <blockquote>Your Uscreen community has 2 levels of access to manage:</blockquote>
+
+                        <ol>
+                            <li><b>Visibility</b>: where you control who gets to see and browse your community.</li>
+                            <li><b>Engagement</b>: where you control who gets to interact in your community. There are 3 groups of people to manage for your community:</li>
+                            <li><b>Public</b>: any internet users</li>
+                            <li><b>Registered</b> users: people with accounts to your platform (may or may not be paying).</li>
+                            <li><b>Subscribers</b>: active, paying members to your platform.</li>
+                        </ol>
+
+                        <p><b>Admin Area</b></p>
+                        <p>The admin area is the control room for your Community.</p>
+
+                        <blockquote>Your Uscreen community has 2 levels of access to manage:</blockquote>
+
+                        <ol>
+                            <li><b>Visibility</b>: where you control who gets to see and browse your community.</li>
+                            <li><b>Engagement</b>: where you control who gets to interact in your community. There are 3 groups of people to manage for your community:</li>
+                            <li><b>Public</b>: any internet users</li>
+                            <li><b>Registered</b> users: people with accounts to your platform (may or may not be paying).</li>
+                            <li><b>Subscribers</b>: active, paying members to your platform.</li>
+                        </ol>
+
+                        <a data-fancybox href="images/post-image.jpg" class="zoom post-image">
+                            <img src="images/post-image.jpg" alt="" width="562" height="433" decoding="async" loading="lazy">
+
+                            <span class="zoom-icon"><svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.75 12.75L18 17" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 8L11 8" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8 5L8 11" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1 8C1 11.866 4.134 15 8 15C9.93632 15 11.6891 14.2138 12.9563 12.9432C14.2193 11.677 15 9.92967 15 8C15 4.134 11.866 1 8 1C4.134 1 1 4.134 1 8Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+                        </a>
+
+                        <p><b>Admin Area</b></p>
+                        <p>The admin area is the control room for your Community.</p>
+
+                        <blockquote>Your Uscreen community has 2 levels of access to manage:</blockquote>
+
+                        <ol>
+                            <li><b>Visibility</b>: where you control who gets to see and browse your community.</li>
+                            <li><b>Engagement</b>: where you control who gets to interact in your community. There are 3 groups of people to manage for your community:</li>
+                            <li><b>Public</b>: any internet users</li>
+                            <li><b>Registered</b> users: people with accounts to your platform (may or may not be paying).</li>
+                            <li><b>Subscribers</b>: active, paying members to your platform.</li>
+                        </ol>
+
+
+                        <div class="comments">
+                            <form action="" method="post" enctype="application/x-www-form-urlencoded" class="comments-write">
+                                <div class="comments-top">
+                                    <div class="comments-title">Comments</div>
+                                    <div class="comments-count">2</div>
+                                </div>
+                                <textarea name="comment" placeholder="What’s on your mind ?"></textarea>
+                                <button type="submit" class="button button-orange">Send</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="post-aside">
+                        <a href="#" class="post-aside__link post-aside__link--active">Admin Area</a>
+                        <a href="#" class="post-aside__link">Native Apps</a>
+                        <a href="#" class="post-aside__link">How to set up your Community</a>
+                        <a href="#" class="post-aside__link">AreaYour</a>
+                        <a href="#" class="post-aside__link">Feedback</a>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="column">
+                    <a href="#" aria-label="Homepage" class="logo">
+                        <img src="svg/logo-footer.svg" alt="Go to homepage" width="157" height="26" decoding="auto">
+                    </a>
+                </div>
+                <div class="column">
+                    <nav>
+                        <ul>
+                            <li class="nav-item"><a class="nav-link nav-link__active" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Newsroom</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">FAQs</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">© Copyright 2022 AboveBoard Solutions, Inc</div>
+                <div class="footer-nav">
+                    <a href="#" class="footer-nav__link">Terms & Conditions</a>
+                    <a href="#" class="footer-nav__link">Privacy Policy</a>
+                    <a href="#" class="footer-nav__link">Your CA Privacy Rights</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script type="module" src="/main.js"></script>
+</body>
+</html>
