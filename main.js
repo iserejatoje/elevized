@@ -2,7 +2,9 @@ import './sass/account.sass'
 
 $(function () {
 
-    Fancybox.bind(document.querySelector("[data-fancybox]"), {});
+    document.querySelectorAll('[data-fancybox]').forEach(function () {
+        Fancybox.bind(this, {});
+    })
 
     if ($('select').length > 0) {
         $('select').niceSelect();
