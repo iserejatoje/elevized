@@ -45,7 +45,7 @@ body
 
 
 .button
-  padding: 9px 23px
+  padding: 9px 26px
   border: none
   outline: none
   cursor: pointer
@@ -109,6 +109,20 @@ body
 
     &:hover
       border-color: $navy
+
+  &-empty
+    background: transparent
+    color: $navy
+    line-height: 160%
+    font-size: 14px
+    text-decoration: none
+    font-weight: bold
+    display: grid
+    place-content: center
+    transition: color 300ms ease-in-out
+
+    &:hover
+      color: $orange
 
 .header
   min-height: 80px
@@ -446,6 +460,12 @@ body
 .opportunities
   padding-bottom: 100px
 
+  .vertical-dots
+    position: absolute
+    pointer-events: none
+    right: 20px
+    top: 20px
+
   &-latest
     margin-top: 70px
 
@@ -459,6 +479,7 @@ body
     grid-template-columns: repeat(3, 1fr)
 
   .opportunity
+    position: relative
     background: $white
     min-height: 300px
     box-shadow: 0 4px 66px rgba(0, 0, 0, 0.06)
@@ -924,3 +945,100 @@ body
       display: grid
       place-content: center
       border-radius: 50%
+
+.modals
+  background: $navy
+  padding: 30px
+  display: flex
+  flex-direction: column
+  gap: 60px
+
+  .modal
+    box-shadow: 0 4px 66px rgba(0, 0, 0, 0.06)
+    background: $white
+    max-width: 670px
+    width: 100%
+    padding: 45px 40px
+    margin-left: auto
+    margin-right: auto
+    line-height: 160%
+    position: relative
+
+    &-text__small
+      border-bottom: 1px solid $light-blue
+      padding-bottom: 15px
+
+    &-text__little
+      padding-top: 10px
+      font-size: 12px
+      line-height: 160%
+      color: transparentize($navy, .44)
+
+    &-bottom
+      margin-top: 30px
+
+    &-elements
+      margin: 30px 0
+
+      input
+        min-height: 67px
+        padding: 10px 25px
+        background: $white
+        width: 100%
+        border: 1px solid rgba(0, 0, 0, 0.1)
+
+    &-heading
+      text-align: center
+      color: $dark
+      font-weight: bold
+      font-size: 20px
+      line-height: 150%
+
+    &-close
+      background: transparent
+      padding: 0
+      outline: none
+      border: none
+      cursor: pointer
+      position: absolute
+      right: 20px
+      top: 20px
+
+      path
+        transition: stroke-opacity 300ms ease-in-out
+
+      &:hover
+        path
+          stroke-opacity: .5
+
+    &-buttons
+      display: flex
+      gap: 10px
+
+    &-line
+      background: rgba(34, 53, 138, 0.2)
+      margin: 30px 0
+      height: 1px
+
+    &-center__text
+      margin-top: 20px
+      font-size: 14px
+      color: transparentize($black, .44)
+
+      a
+        color: $navy
+        text-decoration: none
+
+    &-text
+      font-size: 14px
+
+.heading-small
+  font-size: 16px
+  font-weight: bold
+  padding-bottom: 10px
+  margin-bottom: 15px
+  border-bottom: 1px solid $light-blue
+
+.center
+  display: flex
+  justify-content: center
