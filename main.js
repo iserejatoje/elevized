@@ -2,6 +2,8 @@ import './sass/account.sass'
 
 $(function () {
 
+    Fancybox.bind(document.querySelector("[data-fancybox]"), {});
+
     if ($('select').length > 0) {
         $('select').niceSelect();
     }
@@ -29,8 +31,6 @@ $(function () {
         }
 
         document.querySelectorAll("[data-counter]").forEach(counter)
-
-        Fancybox.bind(document.querySelector("[data-fancybox]"), {});
 
         // const progress = (el) => {
         //     const duration = 500
