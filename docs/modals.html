@@ -55,14 +55,171 @@
         <button class="modal-close"><svg width="28" height="28"><use xlink:href="#close"></use></svg></button>
 
         <div class="modal-title">My Dream Job</div>
-        <div class="modal-inside">
+        <div class="modal-inside grid-gap">
             <div class="modal-step">
                 <div class="step-row">
                     <div class="font-weight--bold">What kinds of opportunities are you looking for? *</div>
                     <div class="font-size--14">Select one or more options</div>
                 </div>
+                <div class="modal-controls">
+                    <label class="checkbox">
+                        <input type="checkbox" checked name="time">
+                        <span></span>
+                        Part Time
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="time">
+                        <span></span>
+                        Full-Time
+                    </label>
+                </div>
+            </div>
+            <div class="modal-step">
+                <div class="step-row">
+                    <div class="font-weight--bold">What workplace(s) are you interested in? *</div>
+                    <div class="font-size--14">Select one or more options</div>
+                </div>
+                <div class="modal-controls">
+                    <label class="checkbox">
+                        <input type="checkbox" checked name="time">
+                        <span></span>
+                        Office
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="time">
+                        <span></span>
+                        Hybrid
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="time">
+                        <span></span>
+                        Remote
+                    </label>
+                </div>
+            </div>
+            <div class="modal-step">
+                <div class="step-row">
+                    <div class="font-weight--bold">What workplace(s) are you interested in? *</div>
+                    <div class="font-size--14">Select one or more options</div>
+                </div>
+                <div class="modal-controls">
+                    <div class="input w100">
+                        <input type="text" placeholder="Location">
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-step">
+                <div class="step-row">
+                    <div class="font-weight--bold">Are you willing to relocate?</div>
+                    <div class="font-size--14">Select one of the options</div>
+                </div>
+                <div class="modal-controls">
+                    <label class="radio">
+                        <input type="radio" checked name="relocate">
+                        <span></span>
+                        Yes
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="relocate">
+                        <span></span>
+                        No
+                    </label>
+                </div>
+            </div>
+
+            <div class="modal-step">
+                <div class="step-row">
+                    <div class="font-weight--bold">What industries are you interested in?</div>
+                    <div class="font-size--14">Select one of the options</div>
+                </div>
+                <div class="modal-controls">
+                    <label class="checkbox">
+                        <input type="checkbox" checked name="ind">
+                        <span></span>
+                        Education
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="ind">
+                        <span></span>
+                        HR/Recruiting
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="ind">
+                        <span></span>
+                        Healthcare & Life Sciences
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="ind">
+                        <span></span>
+                        Rotail &. OTC
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="ind">
+                        <span></span>
+                        Automotive
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="ind">
+                        <span></span>
+                        Professional Services
+                    </label>
+                </div>
+            </div>
+            <div class="modal-step">
+                <div class="step-row">
+                    <div class="font-weight--bold">What company size(s) are you interested in?</div>
+                    <div class="font-size--14">Select one or more options</div>
+                </div>
+
+                <input type="text" class="js-range-slider js-range-slider--size" name="size" value=""
+                       data-type="double"
+                       data-min="0"
+                       data-max="10000"
+                       data-from="500"
+                       data-step="100"
+                       data-to="10000"
+                       data-min-interval="100"
+                       data-force-edges="true"
+                       data-grid-num="1"
+                       data-hide-min-max="true"
+                />
+
+            </div>
+            <div class="modal-step">
+                <div class="step-row">
+                    <div class="font-weight--bold">What company revenue scales are you interested in working with?</div>
+                    <div class="font-size--14">Select one or more options</div>
+                </div>
+
+                <input type="text" class="js-range-slider js-range-slider--revenue" name="revenue" value=""
+                       data-type="double"
+                       data-min="0"
+                       data-max="1000000"
+                       data-from="500000"
+                       data-prefix="$"
+                       data-step="10000"
+                       data-to="1000000"
+                       data-min-interval="0"
+                       data-force-edges="true"
+                       data-grid-num="1"
+                       data-hide-min-max="true"
+                />
+
+            </div>
+            <div class="agree">
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                    <span></span>
+                    I want to receive notifications weekly about new opportunities that match My Dream Job settings.
+                </label>
+            </div>
+            <div class="modal-buttons">
+                <button class="button button-orange">I’m Interested</button>
+                <button class="button button-empty">Close</button>
             </div>
         </div>
+
     </form>
 
     <form action="" enctype="application/x-www-form-urlencoded" method="post" class="modal">
@@ -184,7 +341,6 @@
             </div>
         </div>
     </form>
-
 
 </div>
 

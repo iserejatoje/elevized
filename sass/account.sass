@@ -1,5 +1,6 @@
 @import "normalize.css"
 @import "nice-select.css"
+@import "ion.rangeSlider.min.css"
 @import "fonts"
 
 $semi-black: transparentize(#000, .5)
@@ -964,6 +965,13 @@ body
     line-height: 160%
     position: relative
 
+    &-controls
+      margin-top: 30px
+      display: flex
+      column-gap: 25px
+      flex-wrap: wrap
+      row-gap: 20px
+
     .step-row
       display: grid
       grid-gap: 10px
@@ -1101,6 +1109,7 @@ body
     &-step
       box-shadow: 0 12px 36px rgba(0, 0, 0, 0.07)
       padding: 30px
+      background: $white
 
     &-inside
       padding: 30px 45px 60px 45px
@@ -1195,3 +1204,80 @@ body
 .center
   display: flex
   justify-content: center
+
+.radio,
+.checkbox
+  font-size: 14px
+
+  span
+    transition: border 200ms ease-in-out
+
+  input
+    position: absolute
+    width: 20px
+    height: 20px
+    pointer-events: none
+    opacity: 0
+    z-index: -1
+
+.radio
+  display: inline-flex
+  align-items: center
+  cursor: pointer
+
+  &:hover
+    span
+      border: 1px solid rgb(0 0 0 / 32%)
+
+  input:checked + span
+    &:after
+      content: ''
+      margin: auto
+      width: 12px
+      height: 12px
+      border-radius: 50%
+      background: $orange
+
+  span
+    border-radius: 50%
+    width: 20px
+    height: 20px
+    border: 1px solid rgba(0, 0, 0, 0.2)
+    margin-right: 14px
+    display: grid
+    place-content: center
+    flex-shrink: 0
+
+.checkbox
+  display: inline-flex
+  align-items: center
+  cursor: pointer
+
+  &:hover
+    span
+      border: 1px solid rgb(0 0 0 / 32%)
+
+  input:checked + span
+    background: url("data:image/svg+xml,%3C%3Fxml version='1.0' %3F%3E%3Csvg height='15px' version='1.1' viewBox='0 0 18 15' width='18px' xmlns='http://www.w3.org/2000/svg' xmlns:sketch='http://www.bohemiancoding.com/sketch/ns' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle/%3E%3Cdesc/%3E%3Cdefs/%3E%3Cg fill='none' fill-rule='evenodd' id='Page-1' stroke='none' stroke-width='1'%3E%3Cg fill='%23ff471f' id='Core' transform='translate(-423.000000, -47.000000)'%3E%3Cg id='check' transform='translate(423.000000, 47.500000)'%3E%3Cpath d='M6,10.2 L1.8,6 L0.4,7.4 L6,13 L18,1 L16.6,-0.4 L6,10.2 Z' id='Shape'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat center / 12px
+
+  span
+    width: 20px
+    height: 20px
+    display: inline-block
+    border: 1px solid rgba(0, 0, 0, 0.2)
+    margin-right: 14px
+    flex-shrink: 0
+
+.grid-gap
+  gap: 20px
+  display: flex
+  flex-direction: column
+
+.js-range-slider--size
+  margin-top: 10px
+
+.w100
+  width: 100%
+
+.agree
+  line-height: 140%
