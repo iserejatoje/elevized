@@ -6,18 +6,20 @@ $(function () {
         Fancybox.bind(this, {});
     })
 
-    $('.js-range-slider--size').ionRangeSlider({
-        skin: "round",
-    });
-
     function my_prettify (n) {
         return n + 'm';
     }
 
-    $('.js-range-slider--revenue').ionRangeSlider({
-        skin: "round",
-        prettify: my_prettify
-    });
+    if ($('.js-range-slider').length > 0) {
+        $('.js-range-slider--size').ionRangeSlider({
+            skin: "round",
+        });
+
+        $('.js-range-slider--revenue').ionRangeSlider({
+            skin: "round",
+            prettify: my_prettify
+        });
+    }
 
     if ($('select').length > 0) {
         $('select').niceSelect();
