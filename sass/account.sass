@@ -112,6 +112,21 @@ body
     &:hover
       border-color: $navy
 
+  &-gray
+    background: transparent
+    color: transparentize($black, .5)
+    line-height: 160%
+    font-size: 14px
+    border: 1px solid rgba(0, 0, 0, 0.13)
+    text-decoration: none
+    font-weight: bold
+    display: grid
+    place-content: center
+    transition: border-color 300ms ease-in-out
+
+    &:hover
+      border-color: $navy
+
   &-empty
     background: transparent
     color: $navy
@@ -965,10 +980,14 @@ body
     line-height: 160%
     position: relative
 
+    input
+      &::placeholder
+        color: transparentize($black, .5)
+
     &-controls
-      margin-top: 30px
+      margin-top: 25px
       display: flex
-      column-gap: 25px
+      column-gap: 20px
       flex-wrap: wrap
       row-gap: 20px
 
@@ -1204,6 +1223,50 @@ body
 .center
   display: flex
   justify-content: center
+
+.load-more
+  border: 1px solid transparentize($black, .8)
+  min-height: 37px
+  width: 37px
+  display: grid
+  place-content: center
+  background: transparent
+  cursor: pointer
+  transition: border 200ms ease-in-out
+
+  &:hover
+    border: 1px solid transparentize($black, .6)
+
+.toggle
+  font-size: 12px
+  cursor: pointer
+
+  &:hover
+    span
+      border: 1px solid transparentize($black, .6)
+
+  input:not(:checked) + span
+    transition: border 200ms ease-in-out
+
+  input:checked + span
+    color: $white
+    background: $orange
+    border: 1px solid $orange
+
+  span
+    padding: 6px 23px
+    display: inline-flex
+    user-select: none
+    color: transparentize($black, .5)
+    border: 1px solid transparentize($black, .8)
+
+  input
+    position: absolute
+    width: 20px
+    height: 20px
+    pointer-events: none
+    opacity: 0
+    z-index: -1
 
 .radio,
 .checkbox
